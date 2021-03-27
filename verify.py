@@ -8,23 +8,22 @@ def GetmerkleRoot(hashList):
     newHashList = []
     # Process pairs. For odd length, the last is skipped
     for i in range(0, len(hashList)-1, 2):
-        newHashList.append(Calculate_hash2(hashList[i], hashList[i+1]))
+        newHashList.append(CalculateHash2(hashList[i], hashList[i+1]))
     if len(hashList) % 2 == 1: # odd, hash last item twice
-        newHashList.append(Calculate_hash2(hashList[-1], hashList[-1]))
+        newHashList.append(CalculateHash2(hashList[-1], hashList[-1]))
     return GetmerkleRoot(newHashList)
  
-def Calculate_hash2(a, b):
+def CalculateHash2(a, b):
     # Reverse inputs before and after hashing (SHA256)
     # due to big-endian / little-endian nonsense
     concat = binascii.unhexlify(a) + binascii.unhexlify(b)
     #print(binascii.hexlify(concat))
 
     hash_value = hashlib.sha256(concat).digest()
-    print(binascii.hexlify(hash_value))
+    #print(binascii.hexlify(hash_value))
 
     return binascii.hexlify(hash_value)
  
-# https://blockexplorer.com/rawblock/000000000000030de89e7729d5785c4730839b6e16ea9fb686a54818d3860a8d
 txHashes = [
     "bb28a1a5b3a02e7657a81c38355d56c6f05e80b9219432e3352ddcfc3cb6304c",
     "fbde5d03b027d2b9ba4cf5d4fecab9a99864df2637b25ea4cbcb1796ff6550ca",
@@ -39,5 +38,5 @@ txHashes = [
     "cb00f8a0573b18faa8c4f467b049f5d202bf1101d9ef2633bc611be70376a4b4",
     "05d07bb2de2bda1115409f99bf6b626d23ecb6bed810d8be263352988e4548cb"
 ]  	
- 
-print ( GetmerkleRoot(txHashes) )
+
+print (GetmerkleRoot(txHashes))

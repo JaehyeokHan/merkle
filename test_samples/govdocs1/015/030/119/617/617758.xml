@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xmlns:bib="http://www.loc.gov/mets/profiles/bibRecord" xmlns:lc="http://www.loc.gov/mets/profiles/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ID="mods1">
+               <mods:titleInfo>
+                  <mods:title>KUN SANDHEDEN</mods:title>
+               </mods:titleInfo>
+               <mods:titleInfo type="alternative">
+                  <mods:title>NOTHING BUT THE TRUTH</mods:title>
+               </mods:titleInfo>
+               <mods:name>
+                  <mods:namePart>Henning Ørnbak</mods:namePart>
+                  <mods:role>
+                     <mods:roleTerm type="text">Director</mods:roleTerm>
+                  </mods:role>
+               </mods:name>
+               <mods:name>
+                  <mods:namePart>Palle Mikkelborg</mods:namePart>
+                  <mods:role>
+                     <mods:roleTerm type="text">Composer</mods:roleTerm>
+                  </mods:role>
+               </mods:name>
+               <mods:originInfo>
+                  <mods:copyrightDate>1975</mods:copyrightDate>
+                  <mods:place>
+                     <mods:placeTerm type="text">Denmark</mods:placeTerm>
+                  </mods:place>
+               </mods:originInfo>
+               <mods:note type="Source">Information from: "Jazz on the Screen" by David Meeker. Used with permission.</mods:note>
+               <mods:physicalDescription>
+                  <mods:form authority="gmd">motion picture</mods:form>
+               </mods:physicalDescription>
+               <mods:note>Feature film (over 60 minutes).</mods:note>
+               <mods:identifier type="index">jots</mods:identifier>
+               <mods:recordInfo>
+                  <mods:recordContentSource>IHAS</mods:recordContentSource>
+                  <mods:recordChangeDate encoding="marc">070719</mods:recordChangeDate>
+                  <mods:recordIdentifier source="IHAS">loc.natlib.ihas.200013983</mods:recordIdentifier>
+               </mods:recordInfo>
+            </mods:mods>

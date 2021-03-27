@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="billres.xsl"?>
+<!--<?xml version="1.0"?>-->
+<!--<!DOCTYPE bill PUBLIC "-//US Congress//DTDs/bill.dtd//EN" "C:\Program Files\Blast Radius\rules\bill.dtd" []>-->
+<!DOCTYPE bill PUBLIC "-//US Congress//DTDs/bill v2.8 20020720//EN" "http://thomas.loc.gov/dtd/bill.dtd">
+<bill bill-stage="Introduced-in-House" bill-type="olc" dms-id="H3FF71102442F42A400BA9C23EF4FB0FE" public-private="public">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dublinCore>
+<dc:title>110 HR 6346 IH: Federal Price Gouging Prevention
+</dc:title>
+<dc:publisher>U.S. House of Representatives</dc:publisher>
+<dc:date>2008-06-23</dc:date>
+<dc:format>text/xml</dc:format>
+<dc:language>EN</dc:language>
+<dc:rights>Pursuant to Title 17 Section 105 of the United States Code, this file is not subject to copyright protection and is in the public domain.</dc:rights>
+</dublinCore>
+</metadata>
+	<form>
+		<distribution-code display="yes">I</distribution-code>
+		<congress>110th CONGRESS</congress>
+		<session>2d Session</session>
+		<legis-num>H. R. 6346</legis-num>
+		<current-chamber>IN THE HOUSE OF REPRESENTATIVES</current-chamber>
+		<action>
+			<action-date date="20080623">June 23, 2008</action-date>
+			<action-desc><sponsor name-id="S001045">Mr. Stupak</sponsor> introduced
+			 the following bill; which was referred to the
+			 <committee-name committee-id="HIF00">Committee on Energy and
+			 Commerce</committee-name>, and in addition to the Committee on
+			 <committee-name committee-id="HED00">Education and Labor</committee-name>, for
+			 a period to be subsequently determined by the Speaker, in each case for
+			 consideration of such provisions as fall within the jurisdiction of the
+			 committee concerned</action-desc>
+		</action>
+		<legis-type>A BILL</legis-type>
+		<official-title>To protect consumers from price-gouging of gasoline and
+		  other fuels, and for other purposes.</official-title>
+	</form>
+	<legis-body id="H2D8BE5827EE2496EB4056FE94DF858FD" style="OLC">
+		<section id="H81BAA3B4630B463DBDD71564A396A57C" section-type="section-one"><enum>1.</enum><header>Short title</header><text display-inline="no-display-inline">This Act may be cited as the
+			 <quote><short-title>Federal Price Gouging Prevention
+			 Act</short-title></quote>.</text>
+		</section><section id="H4DAF8A7E50B7417491A3165368EC12A0" section-type="subsequent-section"><enum>2.</enum><header>Unconscionable pricing
+			 of gasoline and other petroleum distillates during emergencies</header>
+			<subsection id="H408D8EAC1FE349E59145A3E2FE6B2F14"><enum>(a)</enum><header>Unconscionable
+			 pricing</header>
+				<paragraph id="H81515C1316E943068F94DD123063A28D"><enum>(1)</enum><header>In
+			 general</header><text display-inline="yes-display-inline">It shall be unlawful
+			 for any person to sell, at wholesale or at retail in an area and during a
+			 period of an energy emergency, gasoline or any other petroleum distillate
+			 covered by a proclamation issued under paragraph (2) at a price that—</text>
+					<subparagraph id="HCDD89F929792458E900057C96BCC4F60"><enum>(A)</enum><text>is unconscionably
+			 excessive; and</text>
+					</subparagraph><subparagraph id="H9CCB99C4BB7B4FE5B917F3D67262204D"><enum>(B)</enum><text>indicates the
+			 seller is taking unfair advantage of the circumstances related to an energy
+			 emergency to increase prices unreasonably.</text>
+					</subparagraph></paragraph><paragraph id="HED973448E43A40D2A7F74547CC81DAC"><enum>(2)</enum><header>Energy emergency
+			 proclamation</header>
+					<subparagraph id="H5A108521709F4770A9E98C2CE27646E3"><enum>(A)</enum><header>In
+			 general</header><text>The President may issue an energy emergency proclamation
+			 for any area within the jurisdiction of the United States, during which the
+			 prohibition in paragraph (1) shall apply. The proclamation shall state the
+			 geographic area covered, the gasoline or other petroleum distillate covered,
+			 and the time period that such proclamation shall be in effect.</text>
+					</subparagraph><subparagraph id="H132759DAD1B14356BE917E58B91D3F68"><enum>(B)</enum><header>Duration</header><text display-inline="yes-display-inline">The proclamation—</text>
+						<clause id="H617E8752E97A4C7E858169C2683899B4"><enum>(i)</enum><text>may
+			 not apply for a period of more than 30 consecutive days, but may be renewed for
+			 such consecutive periods, each not to exceed 30 days, as the President
+			 determines appropriate; and</text>
+						</clause><clause id="H2DC484C5494143678E83377828EDD599"><enum>(ii)</enum><text>may
+			 include a period of time not to exceed 1 week preceding a reasonably
+			 foreseeable emergency.</text>
+						</clause></subparagraph></paragraph><paragraph id="H217B4C44890D49BFAAC6379333BF44A5"><enum>(3)</enum><header>Factors
+			 considered</header><text>In determining whether a person has violated paragraph
+			 (1), there shall be taken into account, among other factors—</text>
+					<subparagraph commented="no" id="HFF315DE6EB5248449BCCEFFB48F907F8"><enum>(A)</enum><text display-inline="yes-display-inline">whether the amount charged by such person
+			 for the applicable gasoline or other petroleum distillate at a particular
+			 location in an area covered by a proclamation issued under paragraph (2) during
+			 the period such proclamation is in effect—</text>
+						<clause commented="no" id="HAB7E7C02BAA247DC9F14501877FD75F6"><enum>(i)</enum><text>grossly exceeds
+			 the average price at which the applicable gasoline or other petroleum
+			 distillate was offered for sale by that person during the 30 days prior to such
+			 proclamation;</text>
+						</clause><clause commented="no" id="H878C2DFDF22B4A4487DE727D95A5373D"><enum>(ii)</enum><text display-inline="yes-display-inline">grossly exceeds the price at which the same
+			 or similar gasoline or other petroleum distillate was readily obtainable in the
+			 same area from other competing sellers during the same period;</text>
+						</clause><clause commented="no" id="H1B542223F6A24EBBAAA26048EE9BDC9E"><enum>(iii)</enum><text display-inline="yes-display-inline">reasonably reflected additional costs, not
+			 within the control of that person, that were paid, incurred, or reasonably
+			 anticipated by that person, or reflected additional risks taken by that person
+			 to produce, distribute, obtain, or sell such product under the circumstances;
+			 and</text>
+						</clause><clause commented="no" id="H3C36FD1493FB497A8E6800122CCFE823"><enum>(iv)</enum><text display-inline="yes-display-inline">was substantially attributable to local,
+			 regional, national, or international market conditions; and</text>
+						</clause></subparagraph><subparagraph commented="no" id="H473BE98773914C558089F4DBD7E8533D"><enum>(B)</enum><text display-inline="yes-display-inline">whether the quantity of gasoline or other
+			 petroleum distillate the person produced, distributed, or sold in an area
+			 covered by a proclamation issued under paragraph (2) during a 30-day period
+			 following the issuance of such proclamation increased over the quantity that
+			 that person produced, distributed, or sold during the 30 days prior to such
+			 proclamation, taking into account usual seasonal demand variations.</text>
+					</subparagraph></paragraph></subsection><subsection id="H7C05B755FBAE40CDA11F2042A3B22800"><enum>(b)</enum><header>Definitions</header><text>As
+			 used in this section—</text>
+				<paragraph id="HFCE11CFDC99C4E568796B6B522B1CB59"><enum>(1)</enum><text>the term
+			 <quote>wholesale</quote>, with respect to sales of gasoline or other petroleum
+			 distillates, means either truckload or smaller sales of gasoline or petroleum
+			 distillates where title transfers at a product terminal or a refinery, and
+			 dealer tank wagon sales of gasoline or petroleum distillates priced on a
+			 delivered basis to retail outlets; and</text>
+				</paragraph><paragraph id="HBC3FF923A09D4C11BA7B8867E1555380"><enum>(2)</enum><text display-inline="yes-display-inline">the term <term>retail</term>, with respect
+			 to sales of gasoline or other petroleum distillates, includes all sales to end
+			 users such as motorists as well as all direct sales to other end users such as
+			 agriculture, industry, residential, and commercial consumers.</text>
+				</paragraph></subsection><subsection id="H96B50B280261471CB0573F93DB67483B"><enum>(c)</enum><header>Construction</header><text display-inline="yes-display-inline">As described in this section, a sale of
+			 gasoline or other petroleum distillate does not include a transaction on a
+			 futures market.</text>
+			</subsection></section><section id="HD63FE7FA07D5480BBD371BDC40BE6CDB"><enum>3.</enum><header>Enforcement by
+			 the Federal Trade Commission</header>
+			<subsection id="H2FCE52D7120A4A9380F4D00CD1BE38F"><enum>(a)</enum><header>Enforcement by
+			 FTC</header><text display-inline="yes-display-inline">A violation of section 2
+			 shall be treated as a violation of a rule defining an unfair or deceptive act
+			 or practice prescribed under section 18(a)(1)(B) of the Federal Trade
+			 Commission Act (<external-xref legal-doc="usc" parsable-cite="usc/15/57a">15 U.S.C. 57a(a)(1)(B)</external-xref>). The Federal Trade Commission shall
+			 enforce this Act in the same manner, by the same means, and with the same
+			 jurisdiction as though all applicable terms and provisions of the Federal Trade
+			 Commission Act were incorporated into and made a part of this Act. In enforcing
+			 section 2(a) of this Act, the Commission shall give priority to enforcement
+			 actions concerning companies with total United States wholesale or retail sales
+			 of gasoline and other petroleum distillates in excess of $500,000,000 per
+			 year.</text>
+			</subsection><subsection id="HDE05D176FD7044309DE66CD6BB32D3BD"><enum>(b)</enum><header>Civil
+			 penalties</header>
+				<paragraph id="H13E792E35D12434584738823F5CE9B11"><enum>(1)</enum><header>In
+			 general</header><text display-inline="yes-display-inline">Notwithstanding the
+			 penalties set forth under the Federal Trade Commission Act, any person who
+			 violates this Act with actual knowledge or knowledge fairly implied on the
+			 basis of objective circumstances shall be subject to the following
+			 penalties:</text>
+					<subparagraph id="H844F6234214A432185883EE5C15370A6"><enum>(A)</enum><header>Price gouging;
+			 unjust profits</header><text display-inline="yes-display-inline">Any person who
+			 violates section 2(a) shall be subject to—</text>
+						<clause id="H8782B8A536CF49BFA06FF59397069751"><enum>(i)</enum><text display-inline="yes-display-inline">a fine of not more than 3 times the amount
+			 of profits gained by such person through such violation; or</text>
+						</clause><clause id="HCCD6B3E4F32E4D1C8D51762CC34E9E84"><enum>(ii)</enum><text display-inline="yes-display-inline">a fine of not more than $3,000,000.</text>
+						</clause></subparagraph><subparagraph id="H18BCB42A14404208BD1BCE637F3C3134"><enum>(B)</enum><header>False
+			 information</header><text>Any person who violates section 2(b) shall be subject
+			 to a civil penalty of not more than $1,000,000.</text>
+					</subparagraph></paragraph><paragraph id="H17C8834907904B4AA8D75E52009BDA12"><enum>(2)</enum><header>Method</header><text>The
+			 penalties provided by paragraph (1) shall be obtained in the same manner as
+			 civil penalties obtained under section 5 of the Federal Trade Commission Act
+			 (<external-xref legal-doc="usc" parsable-cite="usc/15/45">15 U.S.C. 45</external-xref>).</text>
+				</paragraph><paragraph id="H341F8CF4A6B44D7B99AF48FC08FD2072"><enum>(3)</enum><header>Multiple
+			 offenses; mitigating factors</header><text>In assessing the penalty provided by
+			 subsection (a)—</text>
+					<subparagraph id="HAFF9657C67FD4062BAE45F0087B01075"><enum>(A)</enum><text>each day of a
+			 continuing violation shall be considered a separate violation; and</text>
+					</subparagraph><subparagraph id="HEE8FF544E94E4722BBC65CB9B61D327C"><enum>(B)</enum><text display-inline="yes-display-inline">the court shall take into consideration,
+			 among other factors, the seriousness of the violation and the efforts of the
+			 person committing the violation to remedy the harm caused by the violation in a
+			 timely manner.</text>
+					</subparagraph></paragraph></subsection></section><section id="H740396743E13407F8029D3234F3D1313"><enum>4.</enum><header>Criminal
+			 penalties</header>
+			<subsection id="HD4690D389ED948DDB612FB8068F646A3"><enum>(a)</enum><header>In
+			 general</header><text display-inline="yes-display-inline">In addition to any
+			 penalty applicable under section 3, any person who violates section 2 shall be
+			 fined under title 18, United States Code—</text>
+				<paragraph id="HB9CF24D2E70848C1AE1011D933F1C63D"><enum>(1)</enum><text>if a corporation,
+			 not to exceed $150,000,000; and</text>
+				</paragraph><paragraph id="H91808712C6A048A2B5AD19FFE5CB0000"><enum>(2)</enum><text>if an individual
+			 not to exceed $2,000,000, or imprisoned for not more than 10 years, or
+			 both.</text>
+				</paragraph></subsection><subsection id="H80823ED3449D4B3EAFFE0476BFC8CBFA"><enum>(b)</enum><header>Enforcement</header><text>The
+			 criminal penalty provided by subsection (a) may be imposed only pursuant to a
+			 criminal action brought by the Attorney General or other officer of the
+			 Department of Justice.</text>
+			</subsection></section><section id="HA49865F1C35948F3B3DA2BC143E100F5"><enum>5.</enum><header>Enforcement at
+			 retail level by State attorneys general</header>
+			<subsection id="H1D4303639848400CADCD863700BA00BF"><enum>(a)</enum><header>In
+			 general</header><text display-inline="yes-display-inline">A State, as parens
+			 patriae, may bring a civil action on behalf of its residents in an appropriate
+			 district court of the United States to enforce the provisions of section 2(a)
+			 of this Act, or to impose the civil penalties authorized by section 3(b)(1)(B),
+			 whenever the attorney general of the State has reason to believe that the
+			 interests of the residents of the State have been or are being threatened or
+			 adversely affected by a violation of this Act or a regulation under this Act,
+			 involving a retail sale.</text>
+			</subsection><subsection id="HBB211A138DED47B6A5D2E675DD7F6E03"><enum>(b)</enum><header>Notice</header><text>The
+			 State shall serve written notice to the Federal Trade Commission of any civil
+			 action under subsection (a) prior to initiating such civil action. The notice
+			 shall include a copy of the complaint to be filed to initiate such civil
+			 action, except that if it is not feasible for the State to provide such prior
+			 notice, the State shall provide such notice immediately upon instituting such
+			 civil action.</text>
+			</subsection><subsection id="HE596C2420C34423EAB25EA4780F2D38D"><enum>(c)</enum><header>Authority To
+			 intervene</header><text>Upon receiving the notice required by subsection (b),
+			 the Federal Trade Commission may intervene in such civil action and upon
+			 intervening—</text>
+				<paragraph id="H91ACEEEDD8614BF48FAC07009FA228E"><enum>(1)</enum><text>be
+			 heard on all matters arising in such civil action; and</text>
+				</paragraph><paragraph id="H6092B278FD1A4C6D86A315FE25B982C8"><enum>(2)</enum><text>file petitions for
+			 appeal of a decision in such civil action.</text>
+				</paragraph></subsection><subsection id="H4678BD1D9FB04B95B3B800C66B2DA3C5"><enum>(d)</enum><header>Construction</header><text>For
+			 purposes of bringing any civil action under subsection (a), nothing in this
+			 section shall prevent the attorney general of a State from exercising the
+			 powers conferred on the attorney general by the laws of such State to conduct
+			 investigations or to administer oaths or affirmations or to compel the
+			 attendance of witnesses or the production of documentary and other
+			 evidence.</text>
+			</subsection><subsection id="HA3DC660666404643B85BE9AFF03DE071"><enum>(e)</enum><header>Venue; service
+			 of process</header><text>In a civil action brought under subsection (a)—</text>
+				<paragraph id="H58385908321848F5B5D711DA864F02AB"><enum>(1)</enum><text>the venue shall be
+			 a judicial district in which—</text>
+					<subparagraph id="H9CB2762EA1AF48319B54D277CF590069"><enum>(A)</enum><text>the defendant
+			 operates;</text>
+					</subparagraph><subparagraph id="H5272139842DB4CB286EE63C5445D69E4"><enum>(B)</enum><text>the defendant was
+			 authorized to do business; or</text>
+					</subparagraph><subparagraph id="H9F4478B2C47445EBBCA732109D57E000"><enum>(C)</enum><text>the defendant in
+			 the civil action is found;</text>
+					</subparagraph></paragraph><paragraph id="HA05F2B8AEA2A4A76A44EA2FFAB29266"><enum>(2)</enum><text>process may be
+			 served without regard to the territorial limits of the district or of the State
+			 in which the civil action is instituted; and</text>
+				</paragraph><paragraph id="H9BF9DDFD5F024D798171DCC7DF37D900"><enum>(3)</enum><text>a
+			 person who participated with the defendant in an alleged violation that is
+			 being litigated in the civil action may be joined in the civil action without
+			 regard to the residence of the person.</text>
+				</paragraph></subsection><subsection id="H325DB797516C46EF8EC3203FBA36D070"><enum>(f)</enum><header>Limitation on
+			 State action while Federal action is pending</header><text>If the Federal Trade
+			 Commission has instituted a civil action or an administrative action for
+			 violation of this Act, no State attorney general, or official or agency of a
+			 State, may bring an action under this subsection during the pendency of that
+			 action against any defendant named in the complaint of the Federal Trade
+			 Commission or the other agency for any violation of this Act alleged in the
+			 complaint.</text>
+			</subsection><subsection id="HC81AA48F290B446D9DA4A58600DF2124"><enum>(g)</enum><header>Enforcement of
+			 State Law</header><text>Nothing contained in this section shall prohibit an
+			 authorized State official from proceeding in State court to enforce a civil or
+			 criminal statute of such State.</text>
+			</subsection></section><section commented="no" id="HFE19652970964BED97E49D4427388B24"><enum>6.</enum><header>Low Income energy
+			 assistance</header><text display-inline="no-display-inline">Amounts collected
+			 in fines and penalties under section 3 of this Act shall be deposited in a
+			 separate fund in the treasury to be known as the Consumer Relief Trust Fund. To
+			 the extent provided for in advance in appropriations Acts, the fund shall be
+			 used to provide assistance under the Low Income Home Energy Assistance Program
+			 administered by the Secretary of Health and Human Services.</text>
+		</section><section id="H7C9A0ED8C6E94E388174930062DD2D27"><enum>7.</enum><header>Effect on other
+			 laws</header>
+			<subsection id="H03650313ACE24B9AA441F8E85CA3148"><enum>(a)</enum><header>Other authority
+			 of Federal Trade Commission</header><text>Nothing in this Act shall be
+			 construed to limit or affect in any way the Federal Trade Commission’s
+			 authority to bring enforcement actions or take any other measure under the
+			 Federal Trade Commission Act (<external-xref legal-doc="usc" parsable-cite="usc/15/41">15 U.S.C. 41 et seq.</external-xref>) or any other provision of
+			 law.</text>
+			</subsection><subsection id="HC507F21B8125471AA53EBC71D3994462"><enum>(b)</enum><header>State
+			 law</header><text>Nothing in this Act preempts any State law.</text>
+			</subsection></section></legis-body>
+</bill>
+
+

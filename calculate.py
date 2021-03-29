@@ -2,7 +2,6 @@ import os, sys
 import hashlib
 import binascii
 
-
 path = ".\\test_samples"
 
 def FileListinDirectory (Dir) :
@@ -39,8 +38,8 @@ files = FileListinDirectory(path)
 print(len(files))
 
 i = 0
-for file in files :
-    i+=1
+for file in files:
+    i += 1
     print (i, CalculateFileHash(file))
 
 

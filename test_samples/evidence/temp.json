@@ -1,0 +1,65 @@
+original_filename
+aff4:contains      <aff4://512c211c-a723-46bc-b920-47bd2ec7c3c9> , <aff4://f13d17e0-22c8-4f23-90e7-0df07905c801> , <aff4://e9cd53d3-b682-4f12-8045-86ba50a0239c> , <aff4://758a0b3f-ea18-4500-9e42-e0303f66a9bd> , <aff4://9abc6699-d41a-4459-9de9-66de3ccff6d1> , <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> , <aff4://fce3df71-dce8-4a17-af67-36bed58f25c9> ;
+
+        <aff4://f13d17e0-22c8-4f23-90e7-0df07905c801>
+        a                    aff4:CaseNotes ;
+        aff4:caseNumber      "Case ID: 1SR Canonical" ;
+        aff4:evidenceNumber  "Drive 1" ;
+        aff4:examiner        "Administrator" ;
+        aff4:notes           "This is another appended case note" ;
+        aff4:stored          : ;
+        aff4:target          <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> ;
+        aff4:timestamp
+                aff4:caseDescription  "Canonical Image Generation Test Case" ;
+        aff4:caseName         "Canonical Image Generation" ;
+        aff4:examiner         "Administrator" ;
+        aff4:stored           : ;
+        aff4:target           <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> .
+
+        <aff4://512c211c-a723-46bc-b920-47bd2ec7c3c9>
+        a                aff4:TimeStamps ;
+        aff4:endTime     "2016-12-07T03:40:07.625Z"^^xsd:dateTime ;
+        aff4:operation   "CAPTURE" ;
+        aff4:startTime   "2016-12-07T03:40:07.588Z"^^xsd:dateTime ;
+        aff4:stored      : ;
+        aff4:target      <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> ;
+        aff4:timeSource  "SINK" .
+
+        aff4:acquisitionCompletionState
+                "Completed Normally" ;
+        aff4:blockSize               "512"^^xsd:int ;
+        aff4:dataStream              <aff4://e9cd53d3-b682-4f12-8045-86ba50a0239c> ;
+        aff4:diskDeviceName          "/dev/sdz" ;
+        aff4:diskDeviceRole          "0"^^xsd:int ;
+        aff4:diskDeviceType          "Disk" ;
+        aff4:diskFirmware            "1.02a" ;
+        aff4:diskInterfaceType       "ATA" ;
+        aff4:diskMake                "Seagate" ;
+        aff4:diskModel               "ST-506" ;
+        aff4:diskNumberOfPartitions  "1"^^xsd:int ;
+        aff4:diskPartitionTableType  "MBR" ;
+        aff4:diskSerial              "SGAT5060001234" ;
+        aff4:hash                    "81881586142185db75077628a77c65a3007f0802885ce135e77f68e40a4cb5588205b939d6862e9a3a82cdb29234db995c936f5d6d5871a39c5746e082927a35"^^aff4:blockMapHashSHA512 ;
+        aff4:sectorCount             "524288"^^xsd:long ;
+        aff4:size                    "268435456"^^xsd:long ;
+        aff4:stored
+
+                aff4:caseNumber      "Case ID: 1SR Canonical" ;
+        aff4:evidenceNumber  "Drive 1" ;
+        aff4:examiner        "Administrator" ;
+        aff4:notes           "This is an appended case note" ;
+        aff4:stored          : ;
+        aff4:target          <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> ;
+        aff4:timestamp
+
+                aff4:blockMapHash         "81881586142185db75077628a77c65a3007f0802885ce135e77f68e40a4cb5588205b939d6862e9a3a82cdb29234db995c936f5d6d5871a39c5746e082927a35"^^aff4:SHA512 ;
+        aff4:dependentStream      <aff4://fce3df71-dce8-4a17-af67-36bed58f25c9> ;
+        aff4:mapGapDefaultStream  aff4:Zero ;
+        aff4:mapHash              "2a2036f2facf7cb50d9c0077651b2096e0e4ba3b6eb543d7c3dcf83bd55bd154ae99e81a6401b95bf45012f6d400f23fc55cb11309489d84e0ee46d09b32128b"^^aff4:SHA512 ;
+        aff4:mapIdxHash           "643948ffd0afecab224b8a68119c80efcd3716436d1082a5a50d3047bb067cab809ee01118e9e63c048fc64a891f23c9b029e335cb9101dbb737c178ddd4fb87"^^aff4:SHA512 ;
+        aff4:mapPathHash          "0ba524eb71f27370b7613ebc17a33025ee7bd5f32fe0685fc326620546e0c1c2fc072f1f69ea33b5f3ef0326b02070caca93511fb77af3839360513bb77ef7a7"^^aff4:SHA512 ;
+        aff4:mapPointHash         "1681dfb82ba8ae57fc076330f57ac65f6f14cff6aab9f2ab2efd8de9879a8301b06e9a3bd8e028095f90a655d78112e1ebf33e0d47672610493acdf62a2f1d92"^^aff4:SHA512 ;
+        aff4:size                 "268435456"^^xsd:long ;
+        aff4:stored               : ;
+        aff4:target               <aff4://8fcced2b-989f-4f51-bfa2-38d4a4d818fe> .
+

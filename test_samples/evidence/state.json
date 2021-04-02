@@ -1,0 +1,35 @@
+{
+  "hash": "00000000000080b66c911bd5ba14a74260057311eaeb1982802f7010f1a9f090",
+  "version": 1,
+  "state": 0,
+  "birth" : 1293624404,
+  "merkleroot": "4a55e7acced86e6ee8d19d82c3a152598dfb5d27a74aca42c571168db775f380",
+  "count": 4,
+  "items": {
+    "1": {
+      "type": "file",
+      "name": "USB.E01"
+    },
+    "2": {
+      "type": "stream",
+      "name": "browser2.db"
+    },
+    "3": {
+      "type": "file",
+      "name": "pdf/NIST.SP.800-202.pdf"
+    },
+    "4": {
+      "type": "Secondary",
+      "name": "pdf/nistsp800-86.pdf"
+    }
+  },
+  "provenance": {
+    "caseinfo": {
+      "casenumber": "top secret leaks",
+      "evidencenumber": "USB_8MB_PhysicalDrive 1",
+      "examiner": "Jaehyeok Han",
+      "notes": "test version"
+    },
+    "note": ["USB.E01.txt"]
+  }
+}

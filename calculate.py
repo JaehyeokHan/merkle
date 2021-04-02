@@ -1,12 +1,17 @@
 import os, sys
 import hashlib
 import binascii
+import json
+import verify, reader
 
-path = ".\\test_samples"
+evidencePath = ".\\test_samples\\evidence"
 
 def FileListinDirectory (Dir) :
     newFileList = []
-    Dir = os.path.abspath(Dir)
+    if os.path.isabs(Dir) == False:
+        Dir = os.path.abspath(Dir)
+    if os.path.exists(Dir) == False:
+        exit(1)
     entry_list = os.listdir(Dir)
 
     # filtering by file extension
@@ -34,12 +39,45 @@ def CalculateFileHash(a):
 
     return binascii.hexlify(hash_value)
 
-files = FileListinDirectory(path)
-print(len(files))
+def CalculateFileHashList(b, c):
+    newHashList = []
+    for a in c:
+        a = os.path.join(b, 'items', a)
+        if os.path.isabs(a) == False:
+            a = os.path.abspath(a)
+        try:
+            f = open(a, 'rb')
+            raw = f.read()
+            if len(raw) != 0 :
+                hash_value = hashlib.sha256(raw).digest()
+            f.close()
+        except:
+            sys.stderr.write("File open error: %s\n" % a)
+            exit(1)
+        newHashList.append(binascii.hexlify(hash_value))
 
-i = 0
-for file in files:
-    i += 1
-    print (i, CalculateFileHash(file))
+    return newHashList
+
+
+
+itemList = reader.OpenFileListinOrder(evidencePath)
+HashList = CalculateFileHashList(evidencePath, itemList)
+#print(HashList)
+
+merkleroot = verify.GetmerkleRoot(HashList)
+print(merkleroot)
+
+
+itemPath = os.path.join(evidencePath, 'items')
+
+
+#files = FileListinDirectory(os.path.join(path, 'items'))
+#print(len(files))
+
+#
+# i = 0
+# for file in files:
+#     i += 1
+#     print (i, CalculateFileHash(file))
 
 

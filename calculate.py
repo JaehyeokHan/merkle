@@ -6,24 +6,28 @@ class CALCULATOR:
     def __init__(self):
         self.result = 0
 
-    def GetmerkleRoot(self, hashList):
+    def CalculateMerkleRoot(self, hashList, alg='sha256'):
         if len(hashList) == 1:
             return hashList[0]
 
         newHashList = []
-
         # Process pairs. For odd length, the last is skipped
         for i in range(0, len(hashList) - 1, 2):
-            newHashList.append(self.CalculateHash2(hashList[i], hashList[i + 1]))
+            newHashList.append(self.CalculateHash2(hashList[i], hashList[i + 1], alg))
         if len(hashList) % 2 == 1:  # odd, hash last item twice
-            newHashList.append(self.CalculateHash2(hashList[-1], hashList[-1]))
+            newHashList.append(self.CalculateHash2(hashList[-1], hashList[-1], alg))
 
-        return self.GetmerkleRoot(newHashList)
+        return self.CalculateMerkleRoot(newHashList, alg)
 
 
-    def CalculateHash2(self, a, b):
+    def CalculateHash2(self, a, b, alg='sha256'):
         concat = binascii.unhexlify(a) + binascii.unhexlify(b)
-        hash_value = hashlib.sha256(concat).digest()
+        if alg == 'md5':
+            hash_value = hashlib.md5(concat).digest()
+        elif alg == 'sha1':
+            hash_value = hashlib.sha1(concat).digest()
+        else:
+            hash_value = hashlib.sha256(concat).digest()
 
         return binascii.hexlify(hash_value).decode('utf-8')
 

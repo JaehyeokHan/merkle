@@ -43,10 +43,11 @@ class READER:
 
         return raw
 
-    def GetDictMerkleSource(self):
+    def GetDictMerkleSource(self, alg='sha256'):
         newItemDict = dict()
 
-        nf = self.GetValueFunction() # the number of functions
+        numf = self.GetValueFunction() # the number of functions.
+        idxf = self.function.index(alg) # the index of the algorithm from function list.
         ni = self.GetValuenItem()
         items_data = self.json_data['items']
 
@@ -56,9 +57,9 @@ class READER:
                 items_name = items_data[str(i + 1)]['name']
                 newItemDict[str(i + 1)] = (items_attribute, items_name)
             else:
-                print(items_data[str(i + 1)]['hash'])
-                newItemDict[str(i + 1)] = (items_attribute, items_data[str(i + 1)]['hash'])
-
+                #print(items_data[str(i + 1)]['itemhash'][idxf])
+                newItemDict[str(i + 1)] = (items_attribute, items_data[str(i + 1)]['itemhash'][idxf])
+        #print(newItemDict)
         return newItemDict
 
 

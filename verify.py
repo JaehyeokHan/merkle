@@ -23,39 +23,62 @@ class VERIFIER:
 
 
     def VerifyBlockhash(self):
-        a = hashlib.sha256(self.rd.GetBinaryEmptyBlockHash()).digest()
-        verified = binascii.hexlify(a).decode('utf-8')
+        print("* Blockhash")
+
+        acquired = self.rd.GetValueBlockHash()
+        verified = binascii.hexlify(hashlib.sha256(self.rd.GetBinaryEmptyBlockHash()).digest()).decode('utf-8')
+        print(acquired)
+        print(verified)
+
+        if acquired != verified:
+            print("Block hash error: NOT verified. (%s)" % "MerkleDEM.VerifyBlockhash")
+        else:
+            print(" > VALID.")
+
+        print("")
 
         return verified
 
 
     def VerifyMerkleRoot(self):
-        self.MerkleRoot = dict()
-
+        print("* Merkleroot")
         nf = self.rd.GetValueFunction()
         mr = self.rd.GetValueMerkleRoot()
 
         for i in range(0, nf):
-            self.MerkleRoot[self.rd.function[i]] = self.rd.merkleroot[i]
+            alg = self.rd.function[i]
+            print(alg)
+            newMerkleSourceList = []
+            ms = self.rd.GetDictMerkleSource(alg)
+            for j in range(0, len(ms)):
+                if ms[str(j+1)][0] == 'normal':
+                    inPath = os.path.join(self.itemsPath, ms[str(j + 1)][1])
+                    newMerkleSourceList.append(self.cal.CalculateFile(inPath, alg))
+                else:
+                    newMerkleSourceList.append(ms[str(j + 1)][1])
 
-        print(self.MerkleRoot)
+            #print(alg, newMerkleSource)
+            acquired = self.rd.merkleroot[i]
+            verified = self.cal.CalculateMerkleRoot(newMerkleSourceList, alg)
+            print(acquired)
+            print(verified)
+
+            if acquired != verified:
+                print("Merkle hash error: NOT verified. (%s)" % "MerkleDEM.VerifyMerkleRoot")
+            else:
+                print(" > VALID.")
+
+        return newMerkleSourceList
+
 
 # main function
-test = '.\\test_samples\\evidence_0'
+evidence_0 = '.\\test_samples\\evidence_0' # logically imaged items. (total : 4)
+evidence_1 = '.\\test_samples\\evidence_0' # item 2,3 is operated. (encrypted, deleted)
 
-vf = VERIFIER(test)
-
-vf.VerifyBlockhash()
-
-print("-------")
-print("Acquired: %s" % vf.rd.GetValueBlockHash())
-print("Verified: %s" % vf.VerifyBlockhash())
-
-if vf.rd.GetValueBlockHash() != vf.VerifyBlockhash():
-    print("Block hash error: NOT verified. (%s)" % "MerkleDEM.VerifyBlockhash")
-    exit(1)
-else:
-    print("Block hash is verified.")
-print("-------")
-
-vf.VerifyMerkleRoot()
+e0 = VERIFIER(evidence_0)
+e0.VerifyBlockhash()
+e0.VerifyMerkleRoot()
+print("\n--------------------\n")
+e1 = VERIFIER(evidence_1)
+e1.VerifyBlockhash()
+e1.VerifyMerkleRoot()

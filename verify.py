@@ -1,25 +1,61 @@
+import os
+import reader, calculate
+import json
 import binascii
 import hashlib
 
-# Hash pairs of items recursively until a single value is obtained
-def GetmerkleRoot(hashList):
-    if len(hashList) == 1:
-        return hashList[0]
-    newHashList = []
-    # Process pairs. For odd length, the last is skipped
-    for i in range(0, len(hashList)-1, 2):
-        newHashList.append(CalculateHash2(hashList[i], hashList[i+1]))
-    if len(hashList) % 2 == 1: # odd, hash last item twice
-        newHashList.append(CalculateHash2(hashList[-1], hashList[-1]))
-    return GetmerkleRoot(newHashList)
- 
-def CalculateHash2(a, b):
-    # Reverse inputs before and after hashing (SHA256)
-    # due to big-endian / little-endian nonsense
-    concat = binascii.unhexlify(a) + binascii.unhexlify(b)
-    #print(binascii.hexlify(concat))
+class VERIFIER:
+    def __init__(self, Path):
+        self.evPath = Path
+        self.statePath = os.path.join(Path, 'state.json')
+        self.itemsPath = os.path.join(Path, 'items')
+        self.notePath = os.path.join(Path, 'note')
 
-    hash_value = hashlib.sha256(concat).digest()
-    #print(binascii.hexlify(hash_value))
+        if os.path.isfile(self.statePath) == False:
+            print("File exist error: %s (%s)" % self.statePath, "MerkleDEM.__init__")
+            exit(1)
+        elif os.path.isdir(self.itemsPath) == False:
+            print("Directory exist error: %s (%s)" % self.itemsPath, "MerkleDEM.__init__")
+            exit(1)
+        else:
+            self.rd  = reader.READER(self.statePath)
+            self.cal = calculate.CALCULATOR()
 
-    return binascii.hexlify(hash_value)
+
+    def VerifyBlockhash(self):
+        a = hashlib.sha256(self.rd.GetBinaryEmptyBlockHash()).digest()
+        verified = binascii.hexlify(a).decode('utf-8')
+
+        return verified
+
+
+    def VerifyMerkleRoot(self):
+        self.MerkleRoot = dict()
+
+        nf = self.rd.GetValueFunction()
+        mr = self.rd.GetValueMerkleRoot()
+
+        for i in range(0, nf):
+            self.MerkleRoot[self.rd.function[i]] = self.rd.merkleroot[i]
+
+        print(self.MerkleRoot)
+
+# main function
+test = '.\\test_samples\\evidence_0'
+
+vf = VERIFIER(test)
+
+vf.VerifyBlockhash()
+
+print("-------")
+print("Acquired: %s" % vf.rd.GetValueBlockHash())
+print("Verified: %s" % vf.VerifyBlockhash())
+
+if vf.rd.GetValueBlockHash() != vf.VerifyBlockhash():
+    print("Block hash error: NOT verified. (%s)" % "MerkleDEM.VerifyBlockhash")
+    exit(1)
+else:
+    print("Block hash is verified.")
+print("-------")
+
+vf.VerifyMerkleRoot()

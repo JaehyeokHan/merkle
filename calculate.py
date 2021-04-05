@@ -1,74 +1,108 @@
 import os, sys
 import hashlib
 import binascii
-import json
-import verify, reader
 
-evidencePath = ".\\test_samples\\evidence"
+class CALCULATOR:
+    def __init__(self):
+        self.result = 0
 
-def FileListinDirectory (Dir) :
-    newFileList = []
-    if os.path.isabs(Dir) == False:
-        Dir = os.path.abspath(Dir)
-    if os.path.exists(Dir) == False:
-        exit(1)
-    entry_list = os.listdir(Dir)
+    def GetmerkleRoot(self, hashList):
+        if len(hashList) == 1:
+            return hashList[0]
 
-    # filtering by file extension
-    # file_list_pdf = [file for file in entry_list if file.endswith(".pdf")]
-    # print ("file_list_py: {}".format(file_list_pdf))
+        newHashList = []
 
-    for entry_name in entry_list:
-        # print(entry_name)
-        if os.path.isdir(os.path.join(Dir, entry_name)):
-            newFileList.extend(FileListinDirectory(os.path.join(Dir, entry_name)))
+        # Process pairs. For odd length, the last is skipped
+        for i in range(0, len(hashList) - 1, 2):
+            newHashList.append(self.CalculateHash2(hashList[i], hashList[i + 1]))
+        if len(hashList) % 2 == 1:  # odd, hash last item twice
+            newHashList.append(self.CalculateHash2(hashList[-1], hashList[-1]))
+
+        return self.GetmerkleRoot(newHashList)
+
+
+    def CalculateHash2(self, a, b):
+        concat = binascii.unhexlify(a) + binascii.unhexlify(b)
+        hash_value = hashlib.sha256(concat).digest()
+
+        return binascii.hexlify(hash_value).decode('utf-8')
+
+
+    def CalculateBinary(self, raw, alg='sha256'):
+        if len(raw) == 0:
+            return None
+
         else:
-            newFileList.append(os.path.join(Dir, entry_name))
-    return newFileList
-
-def CalculateFileHash(a):
-    try:
-        f = open(a, 'rb')
-        raw = f.read()
-        if len(raw) != 0 :
-            hash_value = hashlib.sha256(raw).digest()
-        f.close()
-    except:
-        sys.stderr.write("File open error: %s\n" % a)
-        exit(1)
-
-    return binascii.hexlify(hash_value)
-
-def CalculateFileHashList(b, c):
-    newHashList = []
-    for a in c:
-        a = os.path.join(b, 'items', a)
-        if os.path.isabs(a) == False:
-            a = os.path.abspath(a)
-        try:
-            f = open(a, 'rb')
-            raw = f.read()
-            if len(raw) != 0 :
+            if alg == 'md5':
+                hash_value = hashlib.md5(raw).digest()
+            elif alg == 'sha1':
+                hash_value = hashlib.sha1(raw).digest()
+            else:
                 hash_value = hashlib.sha256(raw).digest()
+
+        return binascii.hexlify(hash_value).decode('utf-8')
+
+
+    def CalculateFile(self, targetFile, alg='sha256'):
+
+        if os.path.isabs(targetFile) == False:
+            itemPath = os.path.abspath(targetFile)
+
+        try:
+            f = open(targetFile, 'rb')
+            raw = f.read()
+            if len(raw) != 0:
+                if alg == 'md5':
+                    hash_value = hashlib.md5(raw).digest()
+                elif alg == 'sha1':
+                    hash_value = hashlib.sha1(raw).digest()
+                else:
+                    hash_value = hashlib.sha256(raw).digest()
             f.close()
         except:
-            sys.stderr.write("File open error: %s\n" % a)
+            sys.stderr.write("File open error: %s (%s)\n" % targetFile, 'CalculateFile')
             exit(1)
-        newHashList.append(binascii.hexlify(hash_value))
 
-    return newHashList
+        return binascii.hexlify(hash_value).decode('utf-8')
 
+    def CalculateFileList(self, FileList, alg='sha256'):
+        newHashList = []
 
+        for target in FileList:
+            newHashList.append(self.CalculateFile(target, alg))
 
-itemList = reader.OpenFileListinOrder(evidencePath)
-HashList = CalculateFileHashList(evidencePath, itemList)
-#print(HashList)
-
-merkleroot = verify.GetmerkleRoot(HashList)
-print(merkleroot)
+        return newHashList
 
 
-itemPath = os.path.join(evidencePath, 'items')
+    def CalculateFileDict(self, FileDict, alg='sha256'):
+        newHashList = []
+
+        for idx in FileDict:
+            if isinstance (FileDict[idx], list) == True:
+                newHashList.append(FileDict[idx][0])
+
+            else: # isinstance (c[idx], str) == True:
+
+                if os.path.isabs(itemPath) == False:
+                    itemPath = os.path.abspath(itemPath)
+
+                try:
+                    f = open(itemPath, 'rb')
+                    raw = f.read()
+                    if len(raw) != 0 :
+                        hash_value = hashlib.sha256(raw).digest()
+                    f.close()
+                except:
+                    sys.stderr.write("File open error: %s\n" % itemPath)
+                    exit(1)
+                newHashList.append(binascii.hexlify(hash_value).decode('utf-8'))
+
+        return newHashList
+
+# test
+# itemDict = reader.OpenFileListinOrder(statePath)
+#
+# merkleroot = cal.GetmerkleRoot(HashList)
 
 
 #files = FileListinDirectory(os.path.join(path, 'items'))

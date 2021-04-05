@@ -1,0 +1,39 @@
+﻿Created By AccessData® FTK® Imager 4.3.1.1 
+
+Case Information: 
+Acquired using: ADI4.3.1.1
+Case Number: 2021
+Evidence Number:  
+Unique description: test
+Examiner: Jaehyeok Han
+Notes: physical dump
+
+--------------------------------------------------------------
+
+Information for C:\Users\Jack\USB:
+
+Physical Evidentiary Item (Source) Information:
+[Device Info]
+ Source Type: Logical
+[Drive Geometry]
+ Bytes per Sector: 512
+ Sector Count: 16,352
+[Physical Drive Information]
+ Removable drive: True
+ Source data size: 7 MB
+ Sector count:    16352
+[Computed Hashes]
+ MD5 checksum:    1fee317ec61b26e015a32d5484ff0038
+ SHA1 checksum:   bdabdc1564686a4a7789033963e96825fd0da2d8
+
+Image Information:
+ Acquisition started:   Fri Apr  2 10:40:02 2021
+ Acquisition finished:  Fri Apr  2 10:40:03 2021
+ Segment list:
+  C:\Users\Jack\USB.E01
+
+Image Verification Results:
+ Verification started:  Fri Apr  2 10:40:03 2021
+ Verification finished: Fri Apr  2 10:40:03 2021
+ MD5 checksum:    1fee317ec61b26e015a32d5484ff0038 : verified
+ SHA1 checksum:   bdabdc1564686a4a7789033963e96825fd0da2d8 : verified

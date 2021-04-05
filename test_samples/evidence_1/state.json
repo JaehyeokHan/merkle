@@ -1,0 +1,61 @@
+{
+    "hash": "91cd597da579eb871488840735c01d111db814030c815118153a36163d553929",
+    "version": 1,
+    "state": 0,
+    "birth": 1610677815,
+    "function": [
+        "md5",
+        "sha1",
+        "sha256"
+    ],
+    "merkleroot": [
+        "dc47b970905878a67fcb254fe621f634",
+        "e2e1cf9c08908bcf9434363bc6b7d234fc5c9e31",
+        "4a55e7acced86e6ee8d19d82c3a152598dfb5d27a74aca42c571168db775f380"
+    ],
+    "nItem": 4,
+    "items": {
+        "1": {
+            "type": "file",
+            "attribute": "normal",
+            "name": "USB.E01"
+        },
+        "2": {
+            "type": "file",
+            "attribute": "encrypted",
+            "name": "browser2.db",
+            "itemhash": [
+                "f0507411976e36036ee1d5487e5e36b1",
+                "8ffe69b4380bd52b00ea30db8f657ed77c212282",
+                "f220405d0ef3ce451d79be540b2a66f7f8077caaf8c9d87d4d88494ec2c9d3a7"
+            ]
+        },
+        "3": {
+            "type": "file",
+            "attribute": "deleted",
+            "name": "pdf/NIST.SP.800-202.pdf",
+            "itemhash": [
+                "d257131805c46e32ca3d26e49db9854f",
+                "2265f310070ad952929544071a2eea1fd115d096",
+                "8586cf89369279114cb3cad6298269553d38166fa0eb18a70210c0e5c82f18bb"
+            ]
+        },
+        "4": {
+            "type": "file",
+            "attribute": "normal",
+            "name": "pdf/nistsp800-86.pdf"
+        }
+    },
+    "operation": {
+        "2": "encrypted",
+        "3": "deleted"
+    },
+    "caseinfo": {
+        "casenumber": "top secret leaks",
+        "evidencenumber": "USB_8MB_PhysicalDrive 1",
+        "examiner": "Jaehyeok Han",
+        "note": [
+            "USB.E01.txt"
+        ]
+    }
+}
